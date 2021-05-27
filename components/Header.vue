@@ -36,7 +36,6 @@ export default {
   border-bottom:1px solid #2d3142;
   padding: 1em;
   background-color: #bfc0c0;
-  
 }
 .container p {
     margin: 40px;
@@ -75,7 +74,6 @@ export default {
     align-items: center;
     justify-content: space-around;
     position: relative;
-
 }
 
 #btn-prev {

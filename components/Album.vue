@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="album-container">
-        <h2>Album{{album}}</h2>
+        <h2>Album {{album}}</h2>
         <nuxt-link :to="'albums/'+album"><button class="check-btn">Check this album</button></nuxt-link>
     </div>
   </div>
@@ -15,7 +15,7 @@ export default {
 <style scoped>
 .container {
   margin: 0 auto;
-    display: flex;
+  display: flex;
   justify-content: space-around;
   align-items: stretch;
   text-align: center;
@@ -25,6 +25,7 @@ export default {
   border: 1px solid #bfc0c0;
   padding: 1em;
   margin: 1em;
+  box-shadow: 6px 20px 10px #bfc0c0;
 }
 h2{
   color: #2d3142;

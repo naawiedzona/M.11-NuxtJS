@@ -32,6 +32,7 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   align-items: stretch;
+  box-shadow: 6px 20px 10px #bfc0c0;
   
 }
 h2 {

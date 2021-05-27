@@ -72,6 +72,7 @@ export default {
   margin: 0 auto;
   margin-top: 10em;
   padding: 1em;
+  border-radius:8px;
 }
 #modal-header { 
     display: flex;

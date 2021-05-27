@@ -4,7 +4,7 @@
     <Header></Header>
     <Modal v-if="modalVisible" @close="modalVisible = false" :picture="modalPicture"/>
       <h1 class="title">
-        Pictures
+        Pictures Gallery
       </h1>
        <p class="main-text">Lorem ipsum dolor sit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis eius
          numquam asperiores atque id quo at voluptatum voluptatibus sunt dolores, eum quod repudiandae voluptatem? Molestiae officiis a

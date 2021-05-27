@@ -15,7 +15,7 @@ export default {
     props:['id','src','count'],
     methods: {
       infoPicture() {
-      this.$store.commit('InfoUserStore', this.id)
+      this.$store.commit('InfoPictureStore', this.id)
       this.$emit('openModal',this.id)
       }
     }
@@ -40,6 +40,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-content: stretch;
+  box-shadow: 6px 20px 10px #bfc0c0;
 }
 h2{
   color: #2d3142;
