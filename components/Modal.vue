@@ -30,8 +30,11 @@
         <!--   modal body   -->
         <div class="modal-body">
         <h3><span>Name: </span>{{ user.name | upperCase }}</h3>
+        <h3><span>Username: </span>{{ user.username }}</h3>
         <h3><span>Email: </span>{{ user.email }}</h3>
-        <h3><span>Address: </span>{{ user.address.city }}</h3>
+        <h3><span>City: </span>{{ user.address.city }}</h3>
+        <h3><span>Street: </span>{{ user.address.street }}</h3>
+        <h3><span>Number: </span>{{ user.address.suite }}</h3>
         </div>
         <p></p>
       </div>
@@ -63,34 +66,42 @@ export default {
   top: 0;
 } 
  #modal{
-  border: 1px solid green;
-  background: white;
-  color: green;
-  width:60%;
+  border: 2px solid #2d3142;
+  background: #bfc0c0;
+  width:40%;
   margin: 0 auto;
-  margin-top: 150px;
-  padding: 2em;
+  margin-top: 10em;
+  padding: 1em;
 }
 #modal-header { 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid #2d3142;
     padding: 10px;
 }
 .modal-body {
   padding: 10px;
   line-height: 2em;
+  text-align: left;
 }
-.modal-body h3{
-    display: flex;
-    justify-content: space-between;
+.modal-body h3 {
+  margin: 1em;
+  border-bottom: 1px solid #2d3142;
+}
+.modal-body h3 span{
+   color: #2d3142;
+   margin-right: 1em;
 }
 
 #btn-close {
-    background: green;
-    color: white;
-    border: 1px solid green;
-    padding: 8px;
+    background:white;
+    color: #ef8354;
+    border: 1px solid #ef8354;
+    padding: 1em;
+}
+#btn-close:hover {
+color: black;
+border: 1px solid black;
 }
 </style>

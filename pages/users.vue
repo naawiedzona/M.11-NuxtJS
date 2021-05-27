@@ -9,17 +9,14 @@
        <p class="main-text">Lorem ipsum dolor sit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis eius
          numquam asperiores atque id quo ! amet consectetur adipisicing elit. Est sit, molestias impedit repellat laudantium harum. Ea
          que sequi at nobis eius?</p>
-         <div class="user-container">
-           
-      <User
-      class="user"
-      v-for="user of users"
-      :key="user.id"
-      :id="user.id"
-      :name="user.name"
-      :count="user.count"
-      @openModal="openModal(user)"></User>
-           
+      <div class="user-container"> 
+        <User
+        v-for="user of FilteredUsers"
+        :key="user.id"
+        :id="user.id"
+        :name="user.name"
+        :count="user.count"
+        @openModal="openModal(user)"></User> 
       </div>
     </div>
   </div>
@@ -29,6 +26,7 @@
 import Header from '../components/Header.vue';
 import User from '../components/User.vue';
 import Modal from '../components/Modal.vue'
+import { mapGetters } from 'vuex';
 export default {
   components:{
     Header,
@@ -38,7 +36,8 @@ export default {
   computed:{
     users() {
     return this.$store.state.users
-    }
+    },
+     ...mapGetters(['FilteredUsers'])
   },
    mounted() {
     this.$store.dispatch("getUsers");
@@ -61,8 +60,8 @@ export default {
 .container {
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
   text-align: center;
   flex-wrap: wrap;
 }
@@ -93,6 +92,8 @@ export default {
 .user-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
 }
 
 

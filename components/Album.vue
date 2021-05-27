@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="album-container">
-        <h1>Album{{album}}</h1>
+        <h2>Album{{album}}</h2>
         <nuxt-link :to="'albums/'+album"><button class="check-btn">Check this album</button></nuxt-link>
     </div>
   </div>
@@ -15,18 +15,21 @@ export default {
 <style scoped>
 .container {
   margin: 0 auto;
-  display: flex;
+    display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
   flex-wrap: wrap;
 }
 .album-container {
-  border: 1px solid green;
+  border: 1px solid #bfc0c0;
   padding: 1em;
   margin: 1em;
 }
-
+h2{
+  color: #2d3142;
+  height: 50px;
+}
 .title {
   font-family:
     'Quicksand',
@@ -51,17 +54,16 @@ export default {
 }
 
 .check-btn {
-  border: 1px solid green;
-  color: green;
+  border: 1px solid #2d3142;
+  background-color:  #2d3142;
+  color: white;
+  border-radius: 8px;
   padding: 10px;
-  margin: 20px;
+  margin: 30px 20px 5px 20px;
+  cursor: pointer;
 }
 
 .check-btn:hover {
-  border: 1px solid green;
-  background-color: green;
-  color: white;
-  padding: 10px;
-  margin: 20px;
+  opacity: 0.9;
 }
 </style>

@@ -1,10 +1,9 @@
 <template>
   <div class="container">
     <div class="user-container">
-        <h3>{{id}}</h3>
-        <p>{{name}}</p>
-        <p>{{count}}</p>
-        <button class="check-btn" @click="infoUser()">Consult user</button>
+        <h2>{{name}}</h2>
+        <button class="check-btn" @click="infoUser()">More info</button>
+        <p class="small">{{count}} views</p>
     </div>
   </div>
 </template>
@@ -25,23 +24,36 @@ export default {
 <style scoped>
 
 .user-container {
-  border: 1px solid green;
+  border: 1px solid #bfc0c0;
   margin: 2em;
   padding: 1em;
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
   
 }
+h2 {
+  color: #2d3142;
+  height: 90px;
+}
 .check-btn {
-  border: 1px solid green;
-  color: green;
+  border: 1px solid #2d3142;
+  background-color:  #2d3142;
+  color: white;
+  border-radius: 8px;
   padding: 10px;
-  margin: 20px;
+  margin: 30px 20px 5px 20px;
 }
 
 .check-btn:hover {
-  border: 1px solid green;
-  background-color: green;
+  border: 1px solid #2d3142;
+  background-color: #2d3142;
   color: white;
-  padding: 10px;
-  margin: 20px;
 }
+.small {
+  font-size: 0.7em;
+}
+
 </style>

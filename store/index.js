@@ -39,6 +39,9 @@ export const mutations = {
         picture.count++;
       }
     });
+  },
+  SetSearch(state, value) {
+    state.search = value;
   }
 };
 
@@ -57,3 +60,34 @@ export const actions = {
   }
 };
 
+export const getters = {
+  FilteredUsers(state) {
+    let users = state.users;
+    let usersTemp = [];
+    if (state.search.length > 1) {
+      for (const user of users) {
+        if (
+          user.name
+            .toLocaleLowerCase()
+            .includes(state.search.toLocaleLowerCase())
+        ) {
+          usersTemp.push(user);
+        }
+      }
+      users = usersTemp;
+      return users;
+    } else {
+      for (const user of users) {
+        if (
+          user.name
+            .toLocaleLowerCase()
+            .includes(state.search.toLocaleLowerCase())
+        ) {
+          usersTemp.push(user);
+        }
+      }
+      users = usersTemp;
+      return users;
+    }
+  }
+};

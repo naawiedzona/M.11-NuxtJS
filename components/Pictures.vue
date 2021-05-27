@@ -15,6 +15,7 @@
       :key="picture.id"
       :id="picture.id"
       :src="picture.thumbnailUrl"
+      :count="picture.count"
       @openModal="openModal(picture)"></Picture>
       </div>
     </div>
@@ -63,13 +64,15 @@ export default {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
   flex-wrap: wrap;
 }
 .pictures-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .title {

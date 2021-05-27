@@ -1,9 +1,10 @@
 <template>
   <div class="container">
     <div class="picture-container">
-        <h1>Picture nr {{this.id}}</h1>
+        <h2>Picture nr {{this.id}}</h2>
         <img :src="this.src">
         <button class="check-btn" @click="infoPicture()">Check this picture</button>
+        <p class="small">{{count}} views</p>
         
     </div>
   </div>
@@ -11,7 +12,7 @@
 
 <script>
 export default {
-    props:['id','src'],
+    props:['id','src','count'],
     methods: {
       infoPicture() {
       this.$store.commit('InfoUserStore', this.id)
@@ -24,30 +25,40 @@ export default {
 <style scoped>
 .container {
   margin: 0 auto;
+    display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  text-align: center;
+  flex-wrap: wrap;
 }
 .picture-container {
-  border: 1px solid green;
-  padding: 1em;
-  margin: 1em;
+  border: 1px solid #bfc0c0;
+  padding: 2em;
+  margin: 2em;
+  width: 20em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: stretch;
 }
-
+h2{
+  color: #2d3142;
+  height: 50px;
+}
 .check-btn {
-  border: 1px solid green;
-  background-color: white;
-  color: green;
+  border: 1px solid #2d3142;
+  background-color:  #2d3142;
+  color: white;
+  border-radius: 8px;
   padding: 10px;
-  margin: 20px;
+  margin: 30px 20px 5px 20px;
+  cursor: pointer;
 }
 
 .check-btn:hover {
-  border: 1px solid green;
-  background-color: green;
-  color: white;
-  padding: 10px;
-  margin: 20px;
+  opacity: 0.9;
+}
+.small {
+  font-size: 0.7em;
 }
 </style>

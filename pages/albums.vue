@@ -50,15 +50,15 @@ export default {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
   flex-wrap: wrap;
 }
 .albums-container {
-  
-  display: flex;
+   display: flex;
   flex-wrap: wrap;
-  
+  justify-content: center;
+  align-items: stretch;
 }
 
 .title {

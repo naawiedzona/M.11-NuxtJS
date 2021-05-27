@@ -4,19 +4,28 @@
       <!-- <keep-alive></keep-alive>
       <keep-alive></keep-alive>
       <keep-alive></keep-alive> -->
-      <nuxt-link to="/"><p>home</p></nuxt-link>
-      <nuxt-link to="users"><p>users</p></nuxt-link>
-      <nuxt-link to="albums"><p>albums</p></nuxt-link>
-      
+      <nuxt-link to="/"><p>HOME</p></nuxt-link>
+      <nuxt-link to="users"><p>USERS</p></nuxt-link>
+      <nuxt-link to="albums"><p>ALBUMS</p></nuxt-link>
+      <input id="searchInput" type="text" placeholder="users's name" v-model="searchInput">
     </div>
-    <div class="button-prev-container">
     <button id="btn-prev" @click="$router.go(-1)">Back</button>
-    </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+   computed:{
+    searchInput:{
+       get() {
+         return this.$store.state.search;
+       },
+       set(value) {
+         this.$store.commit("SetSearch", value);
+       }
+     },
+  }
+}
 </script>
 
 <style scoped>
@@ -24,12 +33,26 @@ export default {}
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  border-bottom:1px solid #2d3142;
+  padding: 1em;
+  background-color: #bfc0c0;
+  
 }
 .container p {
     margin: 40px;
-    text-decoration: none;
 }
-
+.container a {
+  text-decoration: none;
+  color: #2d3142;
+}
+.container a:hover {
+  color: white;
+  border-bottom: 1px solid white;
+}
+#searchInput {
+  height: 3em;
+  margin: 2em;
+}
 .title {
   font-family:
     'Quicksand',
@@ -51,18 +74,21 @@ export default {}
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
 
 }
 
 #btn-prev {
-  border: 1px solid green;
+  border: 1px solid #2d3142;
   color: white;
-  background: green;
-  padding: 10px 20px;
+  background: #2d3142;
+  padding: 10px 7px;
+  border-radius: 8px;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
 }
 #btn-prev:hover {
-  border: 1px solid green;
-  color: green;
-  background: white;
+  opacity: 0.9;
 }
 </style>

@@ -1,20 +1,17 @@
 <template>
   <div class="container">
-    
     <div>
       <Header></Header>
-      <h1 class="title">
-        home page
-      </h1>
-       
+      <h1 class="title">Popular users and pictures</h1>
+        <p class="main-text">Lorem ipsum dolor sit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis eius
+          numquam asperiores atque id quo at voluptatum voluptatibus sunt dolores, eum quod repudiandae voluptatem? Molestiae officiis a
+          speriores nemo assumenda doloremque! amet consectetur adipisicing elit. Est sit, molestias impedit repellat laudantium harum. Ea
+          que sequi at nobis eius?</p>
       <div class="consulted-container">
       <ConsultedUsers class="consulted-item"></ConsultedUsers>
       <ConsultedPictures class="consulted-item"></ConsultedPictures>
       </div>
-           <p class="main-text">Lorem ipsum dolor sit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis eius
-         numquam asperiores atque id quo at voluptatum voluptatibus sunt dolores, eum quod repudiandae voluptatem? Molestiae officiis a
-         speriores nemo assumenda doloremque! amet consectetur adipisicing elit. Est sit, molestias impedit repellat laudantium harum. Ea
-         que sequi at nobis eius?</p>
+     
     </div>
   </div>
 </template>
@@ -37,7 +34,7 @@ export default {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
 }
 
@@ -54,14 +51,14 @@ export default {
     sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 5em;
   color: #35495e;
   letter-spacing: 1px;
 }
 .consulted-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 
 }
 
