@@ -5,8 +5,8 @@
       <keep-alive></keep-alive>
       <keep-alive></keep-alive> -->
       <nuxt-link to="/"><p>HOME</p></nuxt-link>
-      <nuxt-link to="users"><p>USERS</p></nuxt-link>
-      <nuxt-link to="albums"><p>ALBUMS</p></nuxt-link>
+      <nuxt-link to="/users"><p>USERS</p></nuxt-link>
+      <nuxt-link to="/albums"><p>ALBUMS</p></nuxt-link>
       <input id="searchInput" type="text" placeholder="users's name" v-model="searchInput">
     </div>
     <button id="btn-prev" @click="$router.go(-1)">Back</button>

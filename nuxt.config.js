@@ -38,12 +38,12 @@ export default {
   build: {
   },
   router: {
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name:'custom',
-        path:'/albums/:album',
-        component: resolve(__dirname,'components/Pictures.vue')
-      })
-    }
+    // extendRoutes(routes, resolve) {
+    //   routes.push({
+    //     name:'custom',
+    //     path:'/albums/:album',
+    //     component: resolve(__dirname,'components/Pictures.vue')
+    //   })
+    // }
   }
 }
