@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div>
+    <div class="cc">
       <Header></Header>
-      <h1 class="title">Popular users and pictures</h1>
+      <h1 class="title">POPULAR USERS AND PICTURES</h1>
         <p class="main-text">Lorem ipsum dolor sit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis eius
           numquam asperiores atque id quo at voluptatum voluptatibus sunt dolores, eum quod repudiandae voluptatem? Molestiae officiis a
           speriores nemo assumenda doloremque! amet consectetur adipisicing elit. Est sit, molestias impedit repellat laudantium harum. Ea
@@ -31,13 +31,18 @@ export default {
 
 <style scoped>
 .container {
+  
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: stretch;
   text-align: center;
+  background-color: rgb(7, 7, 7);
+  
 }
-
+.cc {
+  min-height: 100vh;
+}
 .title {
   font-family:
     'Quicksand',
@@ -52,8 +57,9 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 5em;
-  color: #35495e;
+  color: rgb(202, 190, 190);
   letter-spacing: 1px;
+  margin: 50px;
 }
 .consulted-container {
   display: flex;
@@ -64,11 +70,16 @@ export default {
 
 .consulted-item {
   margin:2em;
+   box-shadow: 6px 20px 10px rgb(0, 0, 0);
+  background-color: rgba(39, 37, 37, 0.199);
+  
 }
 
 .main-text {
   padding: 2em;
   line-height: 30px;
   text-align: left;
+  color: rgb(202, 190, 190);
+  margin: 50px;
 }
 </style>

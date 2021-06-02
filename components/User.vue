@@ -24,7 +24,7 @@ export default {
 <style scoped>
 
 .user-container {
-  border: 1px solid #bfc0c0;
+  border: 1px solid black;
   margin: 2em;
   padding: 1em;
   width: 20em;
@@ -32,29 +32,31 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   align-items: stretch;
-  box-shadow: 6px 20px 10px #bfc0c0;
-  
+  box-shadow: 6px 20px 10px rgb(0, 0, 0);
+  background-color: rgba(39, 37, 37, 0.199);
+
 }
+
 h2 {
-  color: #2d3142;
+  color: #a4161a;
   height: 90px;
 }
 .check-btn {
-  border: 1px solid #2d3142;
-  background-color:  #2d3142;
+  border: 1px solid #a4161a;
+  background-color:  #a4161a;
   color: white;
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 10px;
   margin: 30px 20px 5px 20px;
+  cursor: pointer;
 }
 
 .check-btn:hover {
-  border: 1px solid #2d3142;
-  background-color: #2d3142;
-  color: white;
+  opacity: 0.8;
 }
 .small {
   font-size: 0.7em;
+  color: white;
 }
 
 </style>

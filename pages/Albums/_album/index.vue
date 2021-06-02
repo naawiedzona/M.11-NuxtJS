@@ -4,7 +4,7 @@
     <Header></Header>
     <Modal v-if="modalVisible" @close="modalVisible = false" :picture="modalPicture"/>
       <h1 class="title">
-        Pictures Gallery
+      PICTURES GALLERY
       </h1>
        <p class="main-text">Lorem ipsum dolor sit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis eius
          numquam asperiores atque id quo at voluptatum voluptatibus sunt dolores, eum quod repudiandae voluptatem? Molestiae officiis a
@@ -61,6 +61,7 @@ export default {
 
 <style scoped>
 .container {
+  background-color: rgb(7, 7, 7);
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -89,12 +90,15 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: rgb(202, 190, 190);
   letter-spacing: 1px;
+  margin: 50px;
 }
 .main-text {
   padding: 2em;
   line-height: 30px;
   text-align: left;
+  color: rgb(202, 190, 190);
+  margin: 50px;
 }
 </style>

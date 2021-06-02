@@ -33,24 +33,34 @@ export default {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  border-bottom:1px solid #2d3142;
-  padding: 1em;
-  background-color: #bfc0c0;
+  border-bottom:2px solid #a4161a;
+  height: 350px;
+  background: url('~assets/gallery.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .container p {
     margin: 40px;
 }
 .container a {
   text-decoration: none;
-  color: #2d3142;
+  color: #a4161a;
+  font-size: 1.2em;
 }
 .container a:hover {
   color: white;
   border-bottom: 1px solid white;
 }
+
 #searchInput {
   height: 3em;
   margin: 2em;
+  border: 1px solid #a4161a;
+  background-color: black;
+  color: #a4161a;
+  opacity: 0.7;
+  border-radius: 4px;
 }
 .title {
   font-family:
@@ -77,16 +87,17 @@ export default {
 }
 
 #btn-prev {
-  border: 1px solid #2d3142;
-  color: white;
-  background: #2d3142;
+  border: 1px solid #a4161a;
+  color: #a4161a;
+  background: rgba(255, 255, 255, 0.52);
   padding: 10px 7px;
-  border-radius: 8px;
+  border-radius: 4px;
   position: absolute;
   right: 20px;
+  top: 10px;
   cursor: pointer;
 }
 #btn-prev:hover {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 </style>

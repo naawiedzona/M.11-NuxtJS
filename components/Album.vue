@@ -22,14 +22,16 @@ export default {
   flex-wrap: wrap;
 }
 .album-container {
-  border: 1px solid #bfc0c0;
+  border: 1px solid black;
   padding: 1em;
   margin: 1em;
-  box-shadow: 6px 20px 10px #bfc0c0;
+  box-shadow: 6px 20px 10px rgb(0, 0, 0);
+  background-color: rgba(39, 37, 37, 0.199);
+  width: 20em;
 }
 h2{
-  color: #2d3142;
-  height: 50px;
+  color: #a4161a;
+  height: 70px;
 }
 .title {
   font-family:
@@ -45,18 +47,19 @@ h2{
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: rgb(202, 190, 190);
   letter-spacing: 1px;
 }
 .main-text {
   padding: 2em;
   line-height: 30px;
   text-align: left;
+  color: rgb(202, 190, 190);
 }
 
 .check-btn {
-  border: 1px solid #2d3142;
-  background-color:  #2d3142;
+  border: 1px solid #a4161a;
+  background-color:  #a4161a;
   color: white;
   border-radius: 8px;
   padding: 10px;
@@ -65,6 +68,6 @@ h2{
 }
 
 .check-btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 </style>

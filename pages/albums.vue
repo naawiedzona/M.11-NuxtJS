@@ -3,7 +3,7 @@
     <div>
     <Header></Header>
       <h1 class="title">
-        Albums
+        ALBUMS
       </h1>
        <p class="main-text">Lorem ipsum dolor sit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis eius
          numquam asperiores atque id quo at voluptatum voluptatibus sunt dolores, eum quod repudiandae voluptatem? Molestiae officiis a
@@ -53,12 +53,14 @@ export default {
   align-items: stretch;
   text-align: center;
   flex-wrap: wrap;
+  background-color: rgb(7, 7, 7);
 }
 .albums-container {
    display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
+  
 }
 
 .title {
@@ -75,12 +77,15 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: rgb(202, 190, 190);
   letter-spacing: 1px;
+  margin: 50px;
 }
 .main-text {
   padding: 2em;
   line-height: 30px;
   text-align: left;
+  color: rgb(202, 190, 190);
+  margin: 50px;
 }
 </style>

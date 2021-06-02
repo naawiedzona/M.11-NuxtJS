@@ -19,19 +19,24 @@ export default {
 
 <style scoped>
 h2{
-  color: #2d3142;
+  color: #a4161a;
   margin-bottom: 1em;
   padding-bottom: 1em;
-  border-bottom: 1px solid #bfc0c0;
+  border-bottom: 1px solid #a4161a;
+}
+ul li {
+  color: rgb(202, 190, 190);
 }
 ul li span{
-  color: #35495e;
+  color:#a4161a;
 }
 .consulted-users {
-  border: 1px solid #bfc0c0;
+  border: 1px solid #a4161a;
   padding: 2em;
   margin: 1em;
   display: flex;
   flex-direction: column;
+  box-shadow: 6px 20px 10px rgb(0, 0, 0);
+  background-color: rgba(39, 37, 37, 0.199);
 }
 </style>

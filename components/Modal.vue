@@ -4,13 +4,14 @@
      <div id="moreInfo" v-if="picture">
         <div id="modal">
           <div id="modal-header">
-            <h3>Consulted picture</h3> 
+            <h3>CONSULTED PICTURE</h3> 
             <button id="btn-close" @click="$emit('close')">X</button>
         </div>
         <!--   modal body   -->
         <div class="modal-body">
-        <h3><span>Picture title: </span>{{ picture.title | upperCase }}</h3>
         <h3><span>Picture id: </span>{{ picture.id }}</h3>
+        <h3><span>Picture title: </span>"{{ picture.title | upperCase }}"</h3>
+        
         </div>
         <img :src="picture.thumbnailUrl">
         <p></p>
@@ -24,7 +25,7 @@
       <div id="moreInfo" v-if="user">
         <div id="modal">
           <div id="modal-header">
-            <h3>Consulted User</h3> 
+            <h3>CONSULTED USER</h3> 
             <button id="btn-close" @click="$emit('close')">X</button>
         </div>
         <!--   modal body   -->
@@ -66,19 +67,19 @@ export default {
   top: 0;
 } 
  #modal{
-  border: 2px solid #2d3142;
-  background: #bfc0c0;
+  border: 2px solid #a4161a;
   width:40%;
   margin: 0 auto;
   margin-top: 10em;
   padding: 1em;
-  border-radius:8px;
-}
+  border-radius:4px;
+  background-color: rgba(39, 37, 37, 0.959);
+ }
 #modal-header { 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #2d3142;
+    border-bottom: 1px solid #a4161a;
     padding: 10px;
 }
 .modal-body {
@@ -88,21 +89,23 @@ export default {
 }
 .modal-body h3 {
   margin: 1em;
-  border-bottom: 1px solid #2d3142;
+  border-bottom: 1px solid #a4161a;
 }
 .modal-body h3 span{
-   color: #2d3142;
+   color: #a4161a;
    margin-right: 1em;
 }
 
 #btn-close {
-    background:white;
-    color: #ef8354;
-    border: 1px solid #ef8354;
+    background:black;
+    color: #a4161a;
+    border: 1px solid #a4161a;
     padding: 1em;
+    border-radius: 4px;
 }
 #btn-close:hover {
-color: black;
-border: 1px solid black;
+background:#a4161a;
+    color: black;
+    border: 1px solid black;
 }
 </style>
