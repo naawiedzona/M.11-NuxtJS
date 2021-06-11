@@ -1,20 +1,19 @@
 <template>
   <div class="container">
     <div class="user-container">
-        <h2>{{name}}</h2>
+        <h2>{{user.name}}</h2>
         <button class="check-btn" @click="infoUser()">More info</button>
-        <p class="small">{{count}} views</p>
+        <p class="small">{{user.count}} views</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props:['id','name','count'],
+  props:['user'],
   methods:{
     infoUser () {
-      //this.count++;
-      this.$store.commit('InfoUserStore', this.id)
+      this.$store.commit('InfoUserStore', this.user)
       this.$emit('openModal')
     }
   }

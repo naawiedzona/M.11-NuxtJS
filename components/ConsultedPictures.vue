@@ -11,7 +11,7 @@
 export default {
   computed: {
     pictures() {
-    return this.$store.state.pictures
+    return this.$store.state.picturesConsulted
     }
   }
 }

@@ -13,9 +13,7 @@
         <User
         v-for="user of FilteredUsers"
         :key="user.id"
-        :id="user.id"
-        :name="user.name"
-        :count="user.count"
+        :user="user"
         @openModal="openModal(user)"></User> 
       </div>
     </div>
@@ -39,7 +37,7 @@ export default {
     },
      ...mapGetters(['FilteredUsers'])
   },
-   mounted() {
+   created () {
     this.$store.dispatch("getUsers");
   },
   data () {

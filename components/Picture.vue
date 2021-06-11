@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="picture-container">
-        <h2>Picture nr {{this.id}}</h2>
+        <h2>Picture nr {{picture.id}}</h2>
         <img :src="this.src">
         <button class="check-btn" @click="infoPicture()">Check this picture</button>
-        <p class="small">{{count}} views</p>
+        <p class="small">{{picture.count}} views</p>
         
     </div>
   </div>
@@ -12,10 +12,10 @@
 
 <script>
 export default {
-    props:['id','src','count'],
+    props:['picture'],
     methods: {
       infoPicture() {
-      this.$store.commit('InfoPictureStore', this.id)
+      this.$store.commit('InfoPictureStore', this.picture)
       this.$emit('openModal',this.id)
       }
     }

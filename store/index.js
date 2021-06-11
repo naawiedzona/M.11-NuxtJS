@@ -7,7 +7,9 @@ export const state = () => ({
   users: [],
   pictures: [],
   search: "",
-  albums: []
+  albums: [],
+  usersConsulted: [],
+  picturesConsulted: []
 });
 
 export const mutations = {
@@ -26,19 +28,29 @@ export const mutations = {
     });
     state.pictures = pictures;
   },
-  InfoUserStore (state, value) {
-    state.users.forEach((user) => {
-      if (user.id == value) {
-        user.count++;
-      }
-    });
+  InfoUserStore(state, value) {
+    let consulted = state.usersConsulted.findIndex(
+      item => item.name == value.name
+    );
+    if (consulted === -1) {
+      value.count = 1;
+      state.usersConsulted.push(value);
+    } else {
+      let newConsulted = state.usersConsulted.find(item => item.id == value.id);
+      newConsulted.count++;
+    }
   },
-  InfoPictureStore (state, value) {
-    state.pictures.forEach((picture) => {
-      if (picture.id == value) {
-        picture.count++;
-      }
-    });
+  InfoPictureStore(state, value) {
+    let consulted = state.picturesConsulted.findIndex(
+      item => item.title == value.title
+    );
+    if (consulted === -1) {
+      value.count = 1;
+      state.picturesConsulted.push(value);
+    } else {
+      let newConsulted = state.picturesConsulted.find(item => item.id == value.id);
+      newConsulted.count++;
+    }
   },
   SetSearch(state, value) {
     state.search = value;

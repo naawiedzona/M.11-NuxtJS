@@ -13,9 +13,7 @@
       <div class="pictures-container">
       <Picture class="picture" v-for="picture in picturesbyAlbum"
       :key="picture.id"
-      :id="picture.id"
-      :src="picture.thumbnailUrl"
-      :count="picture.count"
+      :picture="picture"
       @openModal="openModal(picture)"></Picture>
       </div>
     </div>
